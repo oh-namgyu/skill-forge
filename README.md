@@ -1,16 +1,19 @@
 # skill-forge
 
+[![CI](https://github.com/oh-namgyu/skill-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/oh-namgyu/skill-forge/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+> **한글 요약**
+>
+> - `SKILL.md` 와 `commands/*.md` 의 **조용한 실패**를 잡아내는 CLI 입니다. Claude Code 는 프론트매터를 못 읽어도 아무 말 없이 그냥 넘어갑니다.
+> - 대표 사례: 파일 맨 앞의 **BOM 한 글자** 때문에 프론트매터 전체가 무시됩니다. 로그도, 경고도 없습니다.
+> - 설치할 것이 없습니다. **Python 3.9 이상, 외부 의존성 0개** (표준 라이브러리만).
+> - 세 가지 명령: `lint` (14개 규칙 검사) / `list` (설치된 스킬·커맨드 목록) / `new` (새 스킬 뼈대 생성, 덮어쓰기 절대 없음).
+> - 읽기 전용입니다. 파일을 만드는 건 `new` 뿐이고, 그것도 지정한 폴더 안에만. 네트워크 접속은 없습니다.
+> - 바로 실행: `python3 -m skill_forge lint` → `./.claude` 와 `~/.claude` 를 검사합니다.
+> - 규칙표(F001~F090)가 이 문서의 핵심입니다. 아래 **Rules reference** 를 보세요.
+
 Scaffold, lint and catalog Claude Code skills and commands — the failures that never print an error.
-
-## 한눈 요약
-
-- `SKILL.md` 와 `commands/*.md` 의 **조용한 실패**를 잡아내는 CLI 입니다. Claude Code 는 프론트매터를 못 읽어도 아무 말 없이 그냥 넘어갑니다.
-- 대표 사례: 파일 맨 앞의 **BOM 한 글자** 때문에 프론트매터 전체가 무시됩니다. 로그도, 경고도 없습니다.
-- 설치할 것이 없습니다. **Python 3.9 이상, 외부 의존성 0개** (표준 라이브러리만).
-- 세 가지 명령: `lint` (14개 규칙 검사) / `list` (설치된 스킬·커맨드 목록) / `new` (새 스킬 뼈대 생성, 덮어쓰기 절대 없음).
-- 읽기 전용입니다. 파일을 만드는 건 `new` 뿐이고, 그것도 지정한 폴더 안에만. 네트워크 접속은 없습니다.
-- 바로 실행: `python3 -m skill_forge lint` → `./.claude` 와 `~/.claude` 를 검사합니다.
-- 규칙표(F001~F090)가 이 문서의 핵심입니다. 아래 **Rules reference** 를 보세요.
 
 ## What it is
 
@@ -173,4 +176,4 @@ against real skills and commands installed on disk.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). Security policy: [SECURITY.md](SECURITY.md).
