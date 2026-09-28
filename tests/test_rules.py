@@ -281,6 +281,10 @@ class AnalyzeTestCase(RuleTestCase):
         self.assertEqual(counts_by_code(analysis.diagnostics), {"F901": 1})
         self.assertEqual(analysis.diagnostics[0].severity, ERROR)
 
+    def test_analyze_reports_a_missing_explicit_path_as_f900(self):
+        analysis = analyze(discover(paths=[self.tmp / "nope" / "SKILL.md"]))
+        self.assertEqual(counts_by_code(analysis.diagnostics), {"F900": 1})
+
     def test_analyze_is_repeatable(self):
         root = self.tmp / "tree2"
         bundle = root / "skills" / "demo"
