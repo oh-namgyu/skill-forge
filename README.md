@@ -163,7 +163,7 @@ Agent Skills hosts, run `lint --portable` and every extension becomes a warning 
 python3 -m unittest discover -s tests
 ```
 
-180 tests, standard library only, on Python 3.9 through 3.12. Fixtures are synthetic temporary
+181 tests, standard library only, on Python 3.9 through 3.12. Fixtures are synthetic temporary
 directories; no test reads or writes your real config directory.
 
 The rule table in `skill_forge/rules.py` is the single source of truth — the tests iterate over it
